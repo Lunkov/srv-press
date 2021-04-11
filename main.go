@@ -44,8 +44,6 @@ func main() {
   cm.DB.BaseAdd("book",                 reflect.TypeOf(BookModel{}))
   cm.DB.BaseAdd("banners",              reflect.TypeOf(BannersModel{}))
   cm.DB.BaseAdd("user_group",           reflect.TypeOf(GroupModel{}))
-  cm.DB.BaseAdd("service",              reflect.TypeOf(ServiceModel{}))
-  cm.DB.BaseAdd("service_instance",     reflect.TypeOf(ServiceInstanseModel{}))
   
   cm.DB.DBAutoMigrate(models.ConnectStr(cm.GetConfig().PostgresWrite))
   cm.DB.LoadData()

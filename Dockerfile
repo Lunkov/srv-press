@@ -32,8 +32,6 @@ RUN pwd
 RUN ls -l /home/
 RUN ls -l /root/
 
-RUN set
-
 RUN mkdir /app && mkdir /app/templates && mkdir /app/etc
 ADD *.go /app/
 WORKDIR /app/
@@ -48,8 +46,6 @@ RUN go version
 RUN go build -a -v -ldflags '-w -extldflags "-static"' -o ./web-service ./...
 
 RUN ls -l /go/src/
-
-RUN rm -rf /root/.ssh/
 
 #########
 # second stage to obtain a very small image
