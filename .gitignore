@@ -1,0 +1,8 @@
+src/web-service
+src/main
+src/src
+service
+web-service
+web-service.*
+Thumbs.db
+Thumbs.db:*
